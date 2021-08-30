@@ -6,9 +6,9 @@ NodeJs.
 npm install
 ```
 
-## Ejecution
+## Execution
 
-### Puerto 8080
+### Port 8080
 
 ```bash
 npm run dev
