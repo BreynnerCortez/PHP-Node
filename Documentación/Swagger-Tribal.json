@@ -1,0 +1,195 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Tribal",
+    "contact": {}
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/register/user": {
+      "post": {
+        "summary": "Register user",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Registeruser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RegisteruserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/get/shows": {
+      "get": {
+        "summary": "Get shows",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Getshows",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/get/shows/1": {
+      "get": {
+        "summary": "Get show by id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Getshowbyid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/register/comment": {
+      "post": {
+        "summary": "Register comment",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Registercomment",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RegistercommentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/get/comments/1": {
+      "get": {
+        "summary": "Get comments by id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Getcommentsbyid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "RegisteruserRequest": {
+      "title": "RegisteruserRequest",
+      "example": {
+        "name": "Miguel Alejandro",
+        "username": "ma",
+        "password": "123"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "username",
+        "password"
+      ]
+    },
+    "RegistercommentRequest": {
+      "title": "RegistercommentRequest",
+      "example": {
+        "id_movie": 1,
+        "comment": "ghia"
+      },
+      "type": "object",
+      "properties": {
+        "id_movie": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "comment": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id_movie",
+        "comment"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
